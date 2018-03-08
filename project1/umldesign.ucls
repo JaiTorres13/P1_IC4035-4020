@@ -3,150 +3,126 @@
   realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="mySetImplementations.Set1" project="project1" 
     file="/project1/src/mySetImplementations/Set1.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="227" width="183" x="539" y="111"/>    
+    <position height="227" width="183" x="54" y="410"/>    
     <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="2" language="java" name="java.util.Set" project="ICOM4035LAB" 
-    file="/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/rt.jar" binary="true" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="114" y="332"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="3" language="java" name="mySetImplementations.Set2" project="project1" 
+  <class id="2" language="java" name="mySetImplementations.Set2" project="project1" 
     file="/project1/src/mySetImplementations/Set2.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="675" y="526"/>    
+    <position height="-1" width="-1" x="411" y="401"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="com.sun.javafx.collections.SetAdapterChange" project="ICOM4035LAB" 
-    file="/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/jfxrt.jar" binary="true" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="969" y="57"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="dataGenerator.DataGenerator" project="project1" 
+  <class id="3" language="java" name="dataGenerator.DataGenerator" project="project1" 
     file="/project1/src/dataGenerator/DataGenerator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="365" y="688"/>    
+    <position height="-1" width="-1" x="621" y="698"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="dataGenerator.DataReader" project="project1" 
+  <class id="4" language="java" name="dataGenerator.DataReader" project="project1" 
     file="/project1/src/dataGenerator/DataReader.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="925" y="561"/>    
+    <position height="-1" width="-1" x="801" y="92"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="7" language="java" name="interfaces.MySet" project="project1" 
+  <interface id="5" language="java" name="interfaces.MySet" project="project1" 
     file="/project1/src/interfaces/MySet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="164" y="27"/>    
+    <position height="-1" width="-1" x="151" y="33"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="8" language="java" name="interfaces.IntersectionFinder" project="project1" 
+  <interface id="6" language="java" name="interfaces.IntersectionFinder" project="project1" 
     file="/project1/src/interfaces/IntersectionFinder.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="601" y="57"/>    
+    <position height="-1" width="-1" x="548" y="36"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="9" language="java" name="mySetImplementations.AbstractMySet" project="project1" 
+  <class id="7" language="java" name="mySetImplementations.AbstractMySet" project="project1" 
     file="/project1/src/mySetImplementations/AbstractMySet.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="395" y="204"/>    
+    <position height="-1" width="-1" x="141" y="272"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="p1MainClasses.FilesGeneratorMain" project="project1" 
+  <class id="8" language="java" name="p1MainClasses.FilesGeneratorMain" project="project1" 
     file="/project1/src/p1MainClasses/FilesGeneratorMain.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="93" y="598"/>    
+    <position height="-1" width="-1" x="871" y="625"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="setIntersectionFinders.AbstractIntersectionFinder" project="project1" 
+  <class id="9" language="java" name="setIntersectionFinders.AbstractIntersectionFinder" project="project1" 
     file="/project1/src/setIntersectionFinders/AbstractIntersectionFinder.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="335" y="-51"/>    
+    <position height="-1" width="-1" x="552" y="180"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="testerClasses.DataGeneratorTester" project="project1" 
+  <class id="10" language="java" name="testerClasses.DataGeneratorTester" project="project1" 
     file="/project1/src/testerClasses/DataGeneratorTester.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="76" y="768"/>    
+    <position height="-1" width="-1" x="864" y="762"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <dependency id="13">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <generalization id="14">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <dependency id="15">    
-    <end type="SOURCE" refId="5"/>    
+  <dependency id="11">    
+    <end type="SOURCE" refId="10"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
-  <realization id="16">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="8"/>  
+  <dependency id="12">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <realization id="13">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
   </realization>  
+  <realization id="14">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <dependency id="15">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <generalization id="16">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
   <dependency id="17">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  
   <generalization id="18">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="9"/>  
-  </generalization>  
-  <dependency id="19">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
-  <dependency id="20">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
-  <realization id="21">    
-    <end type="SOURCE" refId="9"/>    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="7"/>  
-  </realization>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
