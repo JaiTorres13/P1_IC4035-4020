@@ -9,18 +9,12 @@ public class P3<E> extends AbstractIntersectionFinder<E> {
 	
 	MySet<Integer> t = new Set2<>();
 	
-	Integer c = 1;
 	
 	public P3(String name) {
 		super(name);
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public MySet<E> intersectSets(MySet<E>[] t) {

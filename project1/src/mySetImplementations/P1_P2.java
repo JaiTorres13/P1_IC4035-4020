@@ -14,10 +14,6 @@ public class P1_P2<E> extends AbstractIntersectionFinder<E>{
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public MySet<E> intersectSets(MySet<E>[] t) {
