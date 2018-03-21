@@ -49,7 +49,5 @@ public class FilesGeneratorMain {
 					out.println(setsLists[i][j][k]);
 				out.close();
 			}
-
-
 	}
 }
