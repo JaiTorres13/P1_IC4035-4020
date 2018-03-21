@@ -12,12 +12,16 @@ public class Part1Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		FilesGeneratorMain fg = new FilesGeneratorMain();
+//		FilesGeneratorMain fg = new FilesGeneratorMain();
+//		DataGenerator dg = new DataGenerator(0, 0, 0);
+		DataReader dr = new DataReader();
+		
+		dr.readDataFiles();
 		P1_P2<String> s1 = new P1_P2<String>("Parameters.txt");
 		P3<String> s2 = new P3<String>("Parameters.txt");
 		P4 <String> s3 = new P4 <String>("Parameters.txt");
-		DataGenerator dg = new DataGenerator(0, 0, 0);
-		DataReader dr = new DataReader();
+	
+		
 	}
 	public String Allresults(String res) {
 		return res;
