@@ -11,7 +11,6 @@ public class P4<E> extends AbstractIntersectionFinder<E> {
 	
 	public P4(String name) {
 		super(name);
-		name = "P4";
 	}
 
 	@Override

@@ -7,15 +7,13 @@ public class P1_P2<E> extends AbstractIntersectionFinder<E>{
 
 	public P1_P2(String name) {
 		super(name);
-		name = "P1";
-		name = "P2";
 	}
 
 
 	@Override
 	public MySet<E> intersectSets(MySet<E>[] t) {
 
-		if (this.getName() == "P1") {
+		if (this.getName() == "1") {
 			Set1<E> set1 = (Set1<E>) t[0];
 			for(int i=1; i<t.length; i++) {
 				for(E e: set1) {
@@ -26,7 +24,7 @@ public class P1_P2<E> extends AbstractIntersectionFinder<E>{
 			}
 			return set1;
 		}
-		if(this.getName() == "P2") {
+		if(this.getName() == "2") {
 			Set2<E> set2 = (Set2<E>) t[0];
 			for(int j=1; j<t.length; j++) {
 				for(E s: set2) {
