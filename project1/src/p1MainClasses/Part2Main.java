@@ -2,9 +2,11 @@ package p1MainClasses;
 
 import java.io.FileNotFoundException;
 import java.util.AbstractMap;
+import java.util.Scanner;
 
 import dataGenerator.DataGenerator;
 import dataGenerator.DataReader;
+import interfaces.MySet;
 import mySetImplementations.P1_P2;
 import mySetImplementations.P3;
 import mySetImplementations.P4;
@@ -14,20 +16,32 @@ public class Part2Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		
-		FilesGeneratorMain fg = new FilesGeneratorMain();
+		int finalSize = 50000;
+		int incrementalSizeStep = 200;
+		int initialSize = 1000;
+		int m = 50;
+		int n = 10;
+	    int repetitionsPerSize = 200;
+		MySet[]t = null;
 		P1_P2<Integer> s1 = new P1_P2<Integer>("1");
 		P1_P2<Integer> s2 = new P1_P2<Integer>("2");
 		P3<Integer> s3 = new P3<Integer>("3");
 		P4 <Integer> s4 = new P4 <Integer>("4");
-		DataReader dr = new DataReader();
 		StrategiesTimeCollection<Integer> [] resultsPerStrategy = null;
-
-			int finalSize = 0;
-			int incrementalSizeStep = 0;
-			int initialSize = 0;
-			int m = 0;
-			int n = 0;
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter n: ");
+		n = scan.nextInt();
+		System.out.print("Enter m: ");
+		m = scan.nextInt();
+		System.out.print("Enter initialSize: ");
+		initialSize = scan.nextInt();
+		System.out.print("Enter finalSize: ");
+		finalSize = scan.nextInt();
+		System.out.print("Enter iincrementalSizeStep: ");
+		incrementalSizeStep = scan.nextInt();
+		System.out.print("Enter repetitionsPerSize : ");
+		repetitionsPerSize = scan.nextInt();
+			
 			for (int size=initialSize; size<=finalSize; size+=incrementalSizeStep) { 
    
 	// For each strategy, reset the corresponding internal variable that will be used to store the sum 
@@ -35,7 +49,6 @@ public class Part2Main {
     for (StrategiesTimeCollection<Integer> strategy : resultsPerStrategy) 
         strategy.resetSum();    // set to 0 an internal instance variable used to accumulate sum of times
 			
-    int repetitionsPerSize = 0;
 	// Run all trials for the current size. 
     for (int r = 0; r<repetitionsPerSize; r++) {
     	
@@ -60,13 +73,13 @@ public class Part2Main {
         }
         
 
-//		for(int j = 0; j < m; j++) {
-//			t[j] = null;
-//			for(int i = 0; i < n; i++) {
-//				for(int k = 0; k < dataset[i][j].length; k++)
-//					t[j].add(dataset[i][j][k]);
-//			}
-//		}
+		for(int j = 0; j < m; j++) {
+			t[j] = null;
+			for(int i = 0; i < n; i++) {
+				for(int k = 0; k < dataset[i][j].length; k++)
+					t[j].add(dataset[i][j][k]);
+			}
+		}
     }
     // For each strategy, compute the average time for the current size.	
     for (StrategiesTimeCollection<Integer> strategy : resultsPerStrategy)
