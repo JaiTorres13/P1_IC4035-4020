@@ -34,12 +34,12 @@ public class Part1Main {
 		
 		do{
 			System.out.println("My Set menu:");
-			System.out.println("1. Use P1 stradegy");
-			System.out.println("2. Use P2 stradegy");
-			System.out.println("3. Use P3 stradegy");
-			System.out.println("4. Use P4 stradegy");
+			System.out.println("1. Use P1 strategy");
+			System.out.println("2. Use P2 strategy");
+			System.out.println("3. Use P3 strategy");
+			System.out.println("4. Use P4 strategy");
 			System.out.println("5. Exit program");
-			System.out.println("Only press ENTER to use all stradegies");
+			System.out.println("Only press ENTER to use all strategies");
 			
 			System.out.print("Enter option: ");
 			strategy = scan.next();

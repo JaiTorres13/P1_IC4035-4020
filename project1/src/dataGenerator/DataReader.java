@@ -33,7 +33,8 @@ public class DataReader {
 	 */
 	public Object[][][] readDataFiles() throws FileNotFoundException {
 		dataSet = new Integer[n][m][];
-
+		parentDirectory = "src/inputFiles";
+		
 		for (int i=0; i<n; i++) { 
 			for (int j=0; j<m; j++) {
 				
