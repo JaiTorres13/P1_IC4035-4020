@@ -10,7 +10,6 @@ public class P3<E> extends AbstractIntersectionFinder<E> {
 
 	public P3(String name) {
 		super(name);
-		name = "P3";
 	}
 
 	@Override
