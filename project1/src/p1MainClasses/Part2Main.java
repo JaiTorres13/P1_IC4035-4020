@@ -57,12 +57,23 @@ public class Part2Main {
             // so far accumulated  on the previous trials for datasets of the current size. 
             strategy.incSum(estimatedTime);    				
         }
+        
+
+//		for(int j = 0; j < m; j++) {
+//			t[j] = null;
+//			for(int i = 0; i < n; i++) {
+//				for(int k = 0; k < dataset[i][j].length; k++)
+//					t[j].add(dataset[i][j][k]);
+//			}
+//		}
     }
     // For each strategy, compute the average time for the current size.	
     for (StrategiesTimeCollection<Integer> strategy : resultsPerStrategy)
         strategy.add( new AbstractMap.SimpleEntry<Integer, Float>
                           (size, (strategy.getSum()/((float) repetitionsPerSize)))
                     ); 
+    
+
 }
 
 	}

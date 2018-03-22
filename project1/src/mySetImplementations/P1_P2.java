@@ -7,8 +7,7 @@ public class P1_P2<E> extends AbstractIntersectionFinder<E>{
 
 	public P1_P2(String name) {
 		super(name);
-		name = "P1";
-		name = "P2";
+		name = "P1_P2";
 	}
 
 

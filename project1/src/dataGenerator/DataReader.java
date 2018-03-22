@@ -18,7 +18,7 @@ public class DataReader {
 	
 
 	public DataReader() throws FileNotFoundException {
-		parentDirectory = "inputFiles"; 
+		parentDirectory = "src/inputFiles"; 
 		Scanner parameters = new Scanner(new File(parentDirectory, "parameters.txt")); 
 		// the values of n and m shall be read from file: "inputFiles/parameters.txt". 
 		this.n = parameters.nextInt(); 
