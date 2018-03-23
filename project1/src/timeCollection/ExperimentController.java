@@ -86,25 +86,7 @@ public class ExperimentController{
 					strategy.incSum(estimatedTime);    				
 				}
 
-				//	MySet<Integer>[] t = new MySet[dataset.length];
-				//		if(resultsPerStrategy.equals("1")){
-				//    		for(int i = 0; i < m; i++) {
-				//    			t[i] =  new Set1<>();
-				//    			for(int j = 0; j < n; j++) {
-				//    				for(int k = 0; k < dataset[i][j].length; k++)
-				//    					t[i].add( dataset[i][j][k]);
-				//    			}
-				//        	}
-				//    	}
-				//    	else if (resultsPerStrategy.equals("2") || resultsPerStrategy.equals("3")|| resultsPerStrategy.equals("4") ){
-				//    		for(int i = 0; i < m; i++) {
-				//    			t[i] =  new Set2<>();
-				//    			for(int j = 0; j < n; j++) {
-				//    				for(int k = 0; k < dataset[i][j].length; k++)
-				//    					t[i].add( dataset[i][j][k]);
-				//    			}
-				//        	}
-				//    	}
+
 			}
 			// For each strategy, compute the average time for the current size.	
 			for (StrategiesTimeCollection<Integer> strategy : resultsPerStrategy)

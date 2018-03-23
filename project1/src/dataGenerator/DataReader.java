@@ -18,7 +18,7 @@ public class DataReader {
 	
 
 	public DataReader() throws FileNotFoundException {
-		parentDirectory = "src/inputFiles"; 
+		parentDirectory = "inputFiles"; 
 		Scanner parameters = new Scanner(new File(parentDirectory, "parameters.txt")); 
 		// the values of n and m shall be read from file: "inputFiles/parameters.txt". 
 		this.n = parameters.nextInt(); 
@@ -33,7 +33,7 @@ public class DataReader {
 	 */
 	public Object[][][] readDataFiles() throws FileNotFoundException {
 		dataSet = new Integer[n][m][];
-		parentDirectory = "src/inputFiles";
+		parentDirectory = "inputFiles";
 		
 		for (int i=0; i<n; i++) { 
 			for (int j=0; j<m; j++) {

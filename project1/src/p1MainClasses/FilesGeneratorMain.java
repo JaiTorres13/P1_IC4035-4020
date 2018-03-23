@@ -25,11 +25,11 @@ public class FilesGeneratorMain {
 		else 
 			System.out.println("Invalid number of parameters. Must be <= 2.");
 
- 
+
 	}
 
 	private static void generateFiles(int n, int m, int size) throws FileNotFoundException {
-		String parentDirectory = "src/inputFiles";   // must exist in current directory
+		String parentDirectory = "inputFiles";   // must exist in current directory
 		DataGenerator dg = new DataGenerator(n, m, size);
 		Object[][][] setsLists = dg.generateData();  
 
@@ -37,7 +37,7 @@ public class FilesGeneratorMain {
 		paramsFile.println(n);   // save parameter n
 		paramsFile.println(m);   // save parameter m
 		paramsFile.close();
-		
+
 		// create all the files for testing and grading with random integer values as
 		// content. Each such file represents a set, since there is no repetition of
 		// values. Some might end being empty...
