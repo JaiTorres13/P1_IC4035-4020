@@ -18,9 +18,10 @@ public class P1_P2<E> extends AbstractIntersectionFinder<E>{
 		if (this.getName() == "1") {
 			Set1<E> set1 = (Set1<E>) t[0];
 			for(int i=1; i<t.length; i++) {
-				for(E e: set1) {
-					if(!t[i].contains(e)) {
-						set1.remove(e);
+				for(int j=0;j<set1.size();j++) {
+					Object [] e = set1.toArray();
+					if(!t[i].contains((E) e[j])) {
+						set1.remove((E) e[j]);
 					}
 				}
 			}
@@ -28,10 +29,11 @@ public class P1_P2<E> extends AbstractIntersectionFinder<E>{
 		}
 		if(this.getName() == "2") {
 			Set2<E> set2 = (Set2<E>) t[0];
-			for(int j=1; j<t.length; j++) {
-				for(E s: set2) {
-					if(!t[j].contains(s)) {
-						set2.remove(s);
+			for(int i=1; i<t.length; i++) {
+				for(int j=0;j<set2.size();j++) {
+					Object [] e = set2.toArray();
+					if(!t[i].contains((E) e[j])) {
+						set2.remove((E) e[j]);
 					}
 				}
 			}

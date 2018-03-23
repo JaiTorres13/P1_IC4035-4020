@@ -6,6 +6,8 @@ import java.util.Map;
 
 import interfaces.IntersectionFinder;
 import interfaces.MySet;
+import mySetImplementations.Set1;
+import mySetImplementations.Set2;
 
 import java.util.AbstractMap.SimpleEntry;
 
@@ -24,18 +26,31 @@ extends ArrayList<Map.Entry<Integer, Float>> {
         return strategy.getName(); 
     }
     
-    public void runTrial(Object[][][] dataset) { 
-    	MySet<E>[] data = null ;
-    	int m = dataset[0].length;
-    	int n = dataset.length;
-    	for(int j = 0; j < m; j++) {
-			data[j]= null;
-			for(int i = 0; i < n; i++) {
-				for(int k = 0; k < dataset[i][j].length; k++)
-					data[j].add((E) dataset[i][j][k]);
-			}
-		}
-    	 strategy.intersectSets(data);
+    public void runTrial(Integer[][][] dataset) { 
+    	
+    	MySet<Integer>[] data = new MySet[dataset.length];
+    	int m = dataset.length;
+    	int n = dataset[0].length;
+    	
+    	if(strategy.getName().equals("1")){
+    		for(int i = 0; i < m; i++) {
+    			data[i] =  new Set1<>();
+    			for(int j = 0; j < n; j++) {
+    				for(int k = 0; k < dataset[i][j].length; k++)
+    					data[i].add( dataset[i][j][k]);
+    			}
+        	}
+    	}
+    	else{
+    		for(int i = 0; i < m; i++) {
+    			data[i] =  new Set2<>();
+    			for(int j = 0; j < n; j++) {
+    				for(int k = 0; k < dataset[i][j].length; k++)
+    					data[i].add( dataset[i][j][k]);
+    			}
+        	}
+    	}
+    	 strategy.intersectSets((MySet<E>[]) data);
     }
     
     public void resetSum() { 

@@ -18,12 +18,14 @@ public class P4<E> extends AbstractIntersectionFinder<E> {
 		
 		ArrayList<Integer> allElements = new ArrayList<Integer>();
 		
-		for(Object o: t){
-			allElements.add((Integer) o);
+		for(int i=0; i<t.length;i++){
+			for(Object o: t[i]) {
+				allElements.add((Integer) o);
+			}
 		}
 		
 		HashMap<E, Integer> map = new HashMap<>(); 
-		Integer m = t.hashCode();
+		Integer m = t.length;
 		for (Integer e : allElements) { 
 		     Integer c = map.getOrDefault(e, 0); 
 		     map.put((E) e, c+1); 

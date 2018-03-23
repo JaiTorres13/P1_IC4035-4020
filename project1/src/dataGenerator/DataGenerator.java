@@ -65,8 +65,6 @@ public class DataGenerator {
 				dataSet[i][j] = (Integer[]) set.toArray(new Integer[0]); 
 			}
 		}	
-		
-System.out.println("n = " + n + "  m = " + m); 
 		return dataSet; 
 	}
 

@@ -46,41 +46,48 @@ public class Part1Main {
 			strategy = scan.next();
 			
 			switch(strategy){
-				case "":
-					
-//					System.out.println("Final set by P1: " + s1.intersectSets( (MySet<Integer>[]) data));
-//					System.out.println("Final set by P2: " + s2.intersectSets( (MySet<Integer>[]) data));
-//					System.out.println("Final set by P3: " + s3.intersectSets( (MySet<Integer>[]) data));
-//					System.out.println("Final set by P4: " + s4.intersectSets( (MySet<Integer>[]) data));
-					break;
 				case "1":
-					MySet<Integer>[] data1 = dataConverter1(data);
-					Set1<Integer> set1 =  (Set1<Integer>) s1.intersectSets(data1);
-					System.out.println("Final set by P1: " + set1);
+					MySet<Integer>[] dataP1 = dataConverter1(data);
+					Set1<Integer> setP1 =  (Set1<Integer>) s1.intersectSets(dataP1);
+					System.out.println("Final set by P1: " + setP1);
 					break;
 				case "2":
-					MySet<Integer>[] data2 = dataConverter2(data);
-					Set2<Integer> set2 = (Set2<Integer>) s2.intersectSets(data2);
-					System.out.println("Final set by P2: " + set2);
+					MySet<Integer>[] dataP2 = dataConverter2(data);
+					Set2<Integer> setP2 = (Set2<Integer>) s2.intersectSets(dataP2);
+					System.out.println("Final set by P2: " + setP2);
 					break;
 				case "3":
-					MySet<Integer>[] data3 = dataConverter2(data);
-					Set2<Integer> set3 = (Set2<Integer>) s3.intersectSets(data3);
-					System.out.println("Final set by P3: " + set3);
+					MySet<Integer>[] dataP3 = dataConverter2(data);
+					Set2<Integer> setP3 = (Set2<Integer>) s3.intersectSets(dataP3);
+					System.out.println("Final set by P3: " + setP3);
 					break;
 				case "4":
-					MySet<Integer>[] data4 = dataConverter2(data);
-					Set2<Integer> set4 = (Set2<Integer>) s4.intersectSets(data4);
-					System.out.println("Final set by P4: " + set4);
+					MySet<Integer>[] dataP4 = dataConverter2(data);
+					Set2<Integer> setP4 = (Set2<Integer>) s4.intersectSets(dataP4);
+					System.out.println("Final set by P4: " + setP4);
 					break;
 				case "5":
 					System.out.println("Thank you for using this program.");
 					break;
 				default:
-					System.out.println("Invalid input, please try again.\n");
+					MySet<Integer>[] data1 = dataConverter1(data);
+					Set1<Integer> set1 =  (Set1<Integer>) s1.intersectSets(data1);
+					MySet<Integer>[] data2 = dataConverter2(data);
+					Set2<Integer> set2 = (Set2<Integer>) s2.intersectSets(data2);
+					MySet<Integer>[] data3 = dataConverter2(data);
+					Set2<Integer> set3 = (Set2<Integer>) s3.intersectSets(data3);
+					MySet<Integer>[] data4 = dataConverter2(data);
+					Set2<Integer> set4 = (Set2<Integer>) s4.intersectSets(data4);
+					
+					System.out.println("Final set by P1: " + set1);
+					System.out.println("Final set by P2: " + set2);
+					System.out.println("Final set by P3: " + set3);
+					System.out.println("Final set by P4: " + set4);
+					break;
 			}
 			
 		}while(!strategy.equals("5"));
+		
 		
 		scan.close();
 	}
