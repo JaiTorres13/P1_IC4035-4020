@@ -1,6 +1,7 @@
 package mySetImplementations;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 import interfaces.MySet;
 import setIntersectionFinders.AbstractIntersectionFinder;
@@ -25,8 +26,8 @@ public class P3<E> extends AbstractIntersectionFinder<E> {
 		MySet<E> solT = new Set2<>();
 		E e = (E) allElements.get(0);
 		Integer c = 1;
-		Integer m = t.hashCode();
-		for (int i=1; i<=allElements.size(); i++) {
+		Integer m = t.length;
+		for (int i=1; i<allElements.size(); i++) {
 		      if (i < allElements.size() && allElements.get(i).equals(e)) 
 		          c++;
 		      else { 
@@ -37,7 +38,7 @@ public class P3<E> extends AbstractIntersectionFinder<E> {
 		      } 
 		}
 		if(c == m)
-			solT.add((E) allElements.get(allElements.size() - 1));
+			solT.add( (E) allElements.get(allElements.size() - 1));
 		return solT;
 	}
 

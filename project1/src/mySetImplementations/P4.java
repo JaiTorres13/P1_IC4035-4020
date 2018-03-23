@@ -19,7 +19,7 @@ public class P4<E> extends AbstractIntersectionFinder<E> {
 		ArrayList<Integer> allElements = new ArrayList<Integer>();
 		
 		for(Object o: t){
-			allElements.add((Integer)o);
+			allElements.add((Integer) o);
 		}
 		
 		HashMap<E, Integer> map = new HashMap<>(); 
