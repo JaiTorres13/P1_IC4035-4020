@@ -13,6 +13,7 @@ import mySetImplementations.Set1;
 import mySetImplementations.Set2;
 import timeCollection.StrategiesTimeCollection;
 
+
 public class Part1Main {
 
 	public static void main(String[] args) throws FileNotFoundException {

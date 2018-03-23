@@ -15,11 +15,14 @@ public class P3<E> extends AbstractIntersectionFinder<E> {
 
 	@Override
 	public MySet<E> intersectSets(MySet<E>[] t) {
+		
 	
 		ArrayList<Integer> allElements = new ArrayList<Integer>();
 		
-		for(Object o: t) {
-			allElements.add((Integer) o);
+		for(int i=0; i<t.length;i++){
+			for(Object o: t[i]) {
+				allElements.add((Integer) o);
+			}
 		}
 		
 		allElements.sort(null);
