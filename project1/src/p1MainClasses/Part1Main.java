@@ -11,6 +11,7 @@ import mySetImplementations.P3;
 import mySetImplementations.P4;
 import mySetImplementations.Set1;
 import mySetImplementations.Set2;
+import timeCollection.StrategiesTimeCollection;
 
 public class Part1Main {
 
@@ -21,6 +22,21 @@ public class Part1Main {
 		Scanner scan = new Scanner(System.in);
 		String strategy;
 		DataReader dr = new DataReader();
+//		MySet[] t = new MySet[dr.readDataFiles().length];
+//		
+//		int n;
+//		try{
+//			dr = new DataReader();
+//			n = dr.readDataFiles().length;
+//			for(int i=0; i<n;){
+//				for(Object o: dr.readDataFiles()){
+//					t[i] = ((MySet) o);
+//					i++;
+//				}	
+//			}
+//		} catch (FileNotFoundException e1){
+//			e1.printStackTrace();
+//		}
 
 		Object [][][] data = dr.readDataFiles();
 		
@@ -52,20 +68,28 @@ public class Part1Main {
 //					System.out.println("Final set by P4: " + s4.intersectSets( (MySet<Integer>[]) data));
 					break;
 				case "1":
-					Set1<Integer> union1 = toArray1(data);
-					System.out.println("Final set by P1: " + s1.intersectSets( (MySet<Integer>[]) union1.toArray()));
+					MySet<Integer>[] data1 = dataConverter1(data);
+					//Set1<Integer>[] union1 = toArray1(data1);
+					Set1<Integer> set1 =  (Set1<Integer>) s1.intersectSets(data1);
+					System.out.println("Final set by P1: " + set1);
 					break;
 				case "2":
-					Set2<Integer> union2 = toArray2(data);
-					System.out.println("Final set by P2: " + s2.intersectSets( (MySet<Integer>[]) union2.toArray()));
+					MySet<Integer>[] data2 = dataConverter2(data);
+					//Set2<Integer>[] union2 = toArray2(data2);
+					Set2<Integer> set2 = (Set2<Integer>) s2.intersectSets(data2);
+					System.out.println("Final set by P2: " + set2);
 					break;
 				case "3":
-					Set2<Integer> union3 = toArray2(data);
-					System.out.println("Final set by P3: " + s3.intersectSets( (MySet<Integer>[]) union3.toArray()));
+					MySet<Integer>[] data3 = dataConverter2(data);
+					//Set2<Integer>[] union3 = toArray2(data3);
+					Set2<Integer> set3 = (Set2<Integer>) s3.intersectSets(data3);
+					System.out.println("Final set by P3: " + set3);
 					break;
 				case "4":
-					Set2<Integer> union4 = toArray2(data);
-					System.out.println("Final set by P4: " + s4.intersectSets( (MySet<Integer>[]) union4.toArray()));
+					MySet<Integer>[] data4 = dataConverter2(data);
+					//Set2<Integer>[] union4 = toArray2(data4);
+					Set2<Integer> set4 = (Set2<Integer>) s4.intersectSets(data4);
+					System.out.println("Final set by P4: " + set4);
 					break;
 				case "5":
 					System.out.println("Thank you for using this program.");
@@ -74,7 +98,7 @@ public class Part1Main {
 					System.out.println("Invalid input, please try again.\n");
 			}
 			
-		}while(strategy != "5");
+		}while(!strategy.equals("5"));
 		
 		scan.close();
 	}
@@ -83,21 +107,52 @@ public class Part1Main {
 		return res;
 	}
 	
-	public static Set1<Integer> toArray1(Object [][] data){
-		Set1<Integer> set1 = new Set1<Integer>();
-		for(int i=0;i<data.length;i++)
-			for(int j=0;j<data.length;j++)
-				set1.add((Integer) data[i][j]);
+//	public static Set1<Integer>[] toArray1(MySet<Integer>[] data){
+//		Set1<Integer>[] set1 = new Set1[data.length];
+//		
+//		for(int i=0;i<data.length;i++){
+//			set1[i] = (Set1<Integer>) data[i];
+//		}
+//				
+//		return set1;
+//	}
+//	
+//	public static Set2<Integer>[] toArray2(MySet<Integer>[] data){
+//		Set2<Integer>[] set2 = new Set2[data.length];
+//		
+//		for(int i=0;i<data.length;i++)
+//			set2[i] = (Set2<Integer>) data[i];
+//			
+//		return set2;
+//	}
+	
+	public static MySet<Integer>[] dataConverter1(Object [][][] dataSet){
+		MySet<Integer>[] data = new MySet[dataSet[0].length];
+    	int m = dataSet[0].length;
+    	int n = dataSet.length;
+    	for(int j = 0; j < m; j++) {
+			data[j] = new Set1<Integer>();
+			for(int i = 0; i < n; i++) {
+				for(int k = 0; k < dataSet[i][j].length; k++)
+					data[j].add((Integer) dataSet[i][j][k]);
+			}
+		}
 		
-		return set1;
+		return data;
 	}
 	
-	public static Set2<Integer> toArray2(Object [][] data){
-		Set2<Integer> set2 = new Set2<Integer>();
-		for(int i=0;i<data.length;i++)
-			for(int j=0;j<data.length;j++)
-				set2.add((Integer) data[i][j]);
+	public static MySet<Integer>[] dataConverter2(Object [][][] dataSet){
+		MySet<Integer>[] data = new MySet[dataSet[0].length];
+    	int m = dataSet[0].length;
+    	int n = dataSet.length;
+    	for(int j = 0; j < m; j++) {
+			data[j] = new Set2<Integer>();
+			for(int i = 0; i < n; i++) {
+				for(int k = 0; k < dataSet[i][j].length; k++)
+					data[j].add((Integer) dataSet[i][j][k]);
+			}
+		}
 		
-		return set2;
+		return data;
 	}
 }

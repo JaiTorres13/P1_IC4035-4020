@@ -16,9 +16,11 @@ public class P3<E> extends AbstractIntersectionFinder<E> {
 	public MySet<E> intersectSets(MySet<E>[] t) {
 	
 		ArrayList<Integer> allElements = new ArrayList<Integer>();
+		
 		for(Object o: t) {
 			allElements.add((Integer) o);
 		}
+		
 		allElements.sort(null);
 		MySet<E> solT = new Set2<>();
 		E e = (E) allElements.get(0);
