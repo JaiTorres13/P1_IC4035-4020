@@ -27,10 +27,10 @@ public class Part1Main {
 		Object [][][] data = dr.readDataFiles();
 		
 
-		P1_P2<Integer> s1 = new P1_P2<Integer>("1");
-		P1_P2<Integer> s2 = new P1_P2<Integer>("2");
-		P3<Integer> s3 = new P3<Integer>("3");
-		P4<Integer> s4 = new P4<Integer>("4");
+		P1_P2<Integer> s1 = new P1_P2<Integer>("P1");
+		P1_P2<Integer> s2 = new P1_P2<Integer>("P2");
+		P3<Integer> s3 = new P3<Integer>("P3");
+		P4<Integer> s4 = new P4<Integer>("P4");
 		
 		
 		do{

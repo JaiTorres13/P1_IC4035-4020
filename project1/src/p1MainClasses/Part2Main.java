@@ -21,7 +21,7 @@ public class Part2Main {
 		// min size, max size, size increment, number of trials per size/strategy
 		
 			if (args.length > 6)
-				System.out.println("Unexpected number of parameters. Must me <= 6.");
+				System.out.println("Unexpected number of parameters. Must be <= 6.");
 			for (int i=0; i<args.length; i++)
 				parms[i] = Integer.parseInt(args[i]); 
 			
@@ -33,10 +33,10 @@ public class Part2Main {
 					parms[4],  parms[5]); 
 			
 			/**/	
-			ec.addStrategy(new StrategiesTimeCollection<Integer>(new P1_P2<Integer>("1")));
-			ec.addStrategy(new StrategiesTimeCollection<Integer>(new P1_P2<Integer>("2")));
-			ec.addStrategy(new StrategiesTimeCollection<Integer>(new P3<Integer>("3")));
-			ec.addStrategy(new StrategiesTimeCollection<Integer>(new P4<Integer>("4")));
+			ec.addStrategy(new StrategiesTimeCollection<Integer>(new P1_P2<Integer>("P1")));
+			ec.addStrategy(new StrategiesTimeCollection<Integer>(new P1_P2<Integer>("P2")));
+			ec.addStrategy(new StrategiesTimeCollection<Integer>(new P3<Integer>("P3")));
+			ec.addStrategy(new StrategiesTimeCollection<Integer>(new P4<Integer>("P4")));
 			/**/
 
 			ec.run();    // run the experiments on all the strategies added to the controller object (ec)

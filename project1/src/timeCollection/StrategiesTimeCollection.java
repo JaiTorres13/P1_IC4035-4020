@@ -25,28 +25,28 @@ extends ArrayList<Map.Entry<Integer, Float>> {
     public String getStrategyName() { 
         return strategy.getName(); 
     }
-    
-    public void runTrial(Integer[][][] dataset) { 
+
+	public void runTrial(Integer[][][] dataset) { 
     	
-    	MySet<Integer>[] data = new MySet[dataset.length];
-    	int m = dataset.length;
-    	int n = dataset[0].length;
+    	MySet<Integer>[] data = new MySet[dataset[0].length];
+    	int m = dataset[0].length;
+    	int n = dataset.length;
     	
-    	if(strategy.getName().equals("1")){
-    		for(int i = 0; i < m; i++) {
-    			data[i] =  new Set1<>();
-    			for(int j = 0; j < n; j++) {
+    	if(strategy.getName().equals("P1")){
+    		for(int j = 0; j < m; j++) {
+    			data[j] =  new Set1<>();
+    			for(int i = 0; i < n; i++) {
     				for(int k = 0; k < dataset[i][j].length; k++)
-    					data[i].add( dataset[i][j][k]);
+    					data[j].add( dataset[i][j][k]);
     			}
         	}
     	}
     	else{
-    		for(int i = 0; i < m; i++) {
-    			data[i] =  new Set2<>();
-    			for(int j = 0; j < n; j++) {
+    		for(int j = 0; j < m; j++) {
+    			data[j] =  new Set2<>();
+    			for(int i = 0; i < n; i++) {
     				for(int k = 0; k < dataset[i][j].length; k++)
-    					data[i].add( dataset[i][j][k]);
+    					data[j].add( dataset[i][j][k]);
     			}
         	}
     	}
