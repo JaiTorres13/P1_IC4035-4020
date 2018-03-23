@@ -26,8 +26,8 @@ extends ArrayList<Map.Entry<Integer, Float>> {
     
     public void runTrial(Object[][][] dataset) { 
     	MySet<E>[] data = null ;
-    	int m = 0;
-    	int n = 0;
+    	int m = dataset[0].length;
+    	int n = dataset.length;
     	for(int j = 0; j < m; j++) {
 			data[j]= null;
 			for(int i = 0; i < n; i++) {

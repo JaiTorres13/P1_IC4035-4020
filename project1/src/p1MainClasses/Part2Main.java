@@ -14,34 +14,35 @@ import timeCollection.StrategiesTimeCollection;
 
 public class Part2Main {
 
+	int n;
+	int m;
+	int initialSize;
+	int finalSize;
+	int incrementalSizeStep;
+	int repetitionsPerSize;
+	
+	public Part2Main (int n, int m, int initialSize, int finalSize, int incrementalSizeStep, int repetitionsPerSize) {
+		 finalSize = 50000;
+		 incrementalSizeStep = 200;
+		 initialSize = 1000;
+		m = 50;
+		 n = 10;
+	     repetitionsPerSize = 200;
+	}
 	public static void main(String[] args) throws FileNotFoundException {
-		
-		int finalSize = 50000;
-		int incrementalSizeStep = 200;
-		int initialSize = 1000;
-		int m = 50;
-		int n = 10;
-	    int repetitionsPerSize = 200;
 		MySet[]t = null;
 		P1_P2<Integer> s1 = new P1_P2<Integer>("1");
 		P1_P2<Integer> s2 = new P1_P2<Integer>("2");
 		P3<Integer> s3 = new P3<Integer>("3");
 		P4 <Integer> s4 = new P4 <Integer>("4");
 		StrategiesTimeCollection<Integer> [] resultsPerStrategy = null;
-		Scanner scan = new Scanner(System.in);
-		System.out.print("Enter n: ");
-		n = scan.nextInt();
-		System.out.print("Enter m: ");
-		m = scan.nextInt();
-		System.out.print("Enter initialSize: ");
-		initialSize = scan.nextInt();
-		System.out.print("Enter finalSize: ");
-		finalSize = scan.nextInt();
-		System.out.print("Enter iincrementalSizeStep: ");
-		incrementalSizeStep = scan.nextInt();
-		System.out.print("Enter repetitionsPerSize : ");
-		repetitionsPerSize = scan.nextInt();
+		
 			
+	}
+		public void run() throws CloneNotSupportedException { 
+			StrategiesTimeCollection<Integer> [] resultsPerStrategy = null;
+			if (resultsPerStrategy.length == 0)
+				throw new IllegalStateException("No strategy has been added."); 
 			for (int size=initialSize; size<=finalSize; size+=incrementalSizeStep) { 
    
 	// For each strategy, reset the corresponding internal variable that will be used to store the sum 
@@ -73,13 +74,13 @@ public class Part2Main {
         }
         
 
-		for(int j = 0; j < m; j++) {
-			t[j] = null;
-			for(int i = 0; i < n; i++) {
-				for(int k = 0; k < dataset[i][j].length; k++)
-					t[j].add(dataset[i][j][k]);
-			}
-		}
+//		for(int j = 0; j < m; j++) {
+//			t[j] = null;
+//			for(int i = 0; i < n; i++) {
+//				for(int k = 0; k < dataset[i][j].length; k++)
+//					t[j].add(dataset[i][j][k]);
+//			}
+//		}
     }
     // For each strategy, compute the average time for the current size.	
     for (StrategiesTimeCollection<Integer> strategy : resultsPerStrategy)
@@ -91,6 +92,8 @@ public class Part2Main {
 }
 
 	}
+		
+	
 	public String Allresults(String res) {
 		return res;
 	}
