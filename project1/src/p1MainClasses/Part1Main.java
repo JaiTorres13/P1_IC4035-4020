@@ -37,11 +37,11 @@ public class Part1Main {
 		FinderInt[3] = new P4("P4"); 
 
 		// The user can select the type of strategy in the terminal
-		if (args.length!=0) { 
+		if (args.length != 0) { 
 
 			int strategy = Integer.parseInt(args[0])-1;
-			System.out.println("Final set by " + FinderInt[strategy].getName()+":" +
-					FinderInt[strategy].intersectSets(unionFinder(args[0])));
+			System.out.println("Final set by " + FinderInt[strategy].getName() + ":" +
+					FinderInt[strategy].intersectSets(unionIntFinder(args[0])));
 
 		}
 		// If the user does not apply a method, the default choice is to apply all methods
@@ -49,8 +49,8 @@ public class Part1Main {
 
 			for(int i = 0; i < FinderInt.length ; i++){
 
-				System.out.println("Final set by " +FinderInt[i].getName()+":" +
-						FinderInt[i].intersectSets(unionFinder(Integer.toString(i + 1))));
+				System.out.println("Final set by " + FinderInt[i].getName() + ":" +
+						FinderInt[i].intersectSets(unionIntFinder(Integer.toString( i + 1))));
 
 			}
 		}
@@ -60,7 +60,7 @@ public class Part1Main {
 	 * @param arg
 	 * returns an object of type MySet[], converting a three dimension array to an array of type MySet[]
 	 */
-	private static MySet[] unionFinder(String arg) throws FileNotFoundException {
+	private static MySet[] unionIntFinder(String arg) throws FileNotFoundException {
 
 		DataReader datar = new DataReader();
 		Object [][][] dS = datar.readDataFiles();

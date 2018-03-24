@@ -27,9 +27,6 @@ public class Set2<E> extends AbstractMySet<E> {
 		return elements.keySet().iterator(); 
 	}  
 	
-	/**
-	 * @author 
-	 */
 	public Object clone() throws CloneNotSupportedException { 
 		Set2<E> setClone = new Set2<>(); 
 		setClone.elements = (HashMap<E,E>) this.elements.clone(); 
